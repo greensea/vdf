@@ -55,7 +55,7 @@ s = (P - 1) \times (Q - 1)
 $$
 
 $$
-r = (2^{t}) \mod s
+r = 2^{t} \mod s
 $$
 
 $$
@@ -67,9 +67,9 @@ The time complexity of verify function is $O(\log{}{t})$.
 
 ## Note
 
-* When t == 2^20, and with 512 bits N, it takes about 2 seconds to eval and 1ms to verify on an Ryzen 5 2600 CPU.
+* When t == $2^{20}$, and with 512 bits N, it takes about 2 seconds to eval and 1ms to verify on an Ryzen 5 2600 CPU.
 
-* It is strongly recommend pick P and Q with RSA key generator.
+* It is strongly recommend pick P and Q with an RSA key generator.
 
 ## Generate P and Q with Golang
 
