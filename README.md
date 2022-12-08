@@ -74,10 +74,13 @@ The time complexity of verify function is $O(\log{}{t})$.
 ## Generate P and Q with Golang
 
 ```
-import "crypto/rsa"
+import (
+    "crypto/rsa"
+    "crypto/rand"
+)
 
 // Generate 512 bit RSA key
-rsaKey, err := rsa.GenerateKey(crand.Reader, 512)
+rsaKey, err := rsa.GenerateKey(rand.Reader, 512)
 
 p := rsaKey.Primes[0]
 q := rsaKey.Primes[1]
