@@ -183,6 +183,13 @@ func TestNew(t *testing.T) {
 	_ = New(big.NewInt(5), big.NewInt(11))
 }
 
+func TestN(t *testing.T) {
+	v := New(big.NewInt(5), big.NewInt(11))
+	if v.N().Int64() != 5*11 {
+		t.FailNow()
+	}
+}
+
 func TestPow2tMod(t *testing.T) {
 	v := getVDF()
 	x := big.NewInt(11)

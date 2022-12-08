@@ -73,3 +73,8 @@ func (v *VDF) Verify(x *big.Int, t int, y *big.Int) bool {
 		return false
 	}
 }
+
+// Get the modulo
+func (v *VDF) N() *big.Int {
+	return v.n
+}
