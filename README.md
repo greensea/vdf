@@ -5,9 +5,9 @@ A verifiable delay function based on cyclic group $\mathbb{Z} \big/ n\mathbb{Z}$
 ```go
 // Init an VDF instance
 // See Note section to learn how to pick q and n
-q = big.NewInt(5)
-n = big.NewInt(11)
-v := vdf.New(q, n)
+p = big.NewInt(5)
+q = big.NewInt(11)
+v := vdf.New(p, q)
 
 
 // Eval an proof
@@ -79,7 +79,7 @@ import (
     "crypto/rand"
 )
 
-// Generate 512 bit RSA key
+// Generate 512 bits RSA key
 rsaKey, err := rsa.GenerateKey(rand.Reader, 512)
 
 p := rsaKey.Primes[0]
